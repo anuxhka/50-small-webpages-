@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>List Checker</h1>
+        <div class="input-section">
+            <input type="file" id="fileInput" accept=".xlsx" onchange="uploadFile()">
+            <input type="text" id="manualInput" placeholder="What needs to be done?">
+            <button class="add-btn" onclick="addItem()">+</button>
+        </div>
+        <ul id="listContainer"></ul>
+        <div class="footer">
+            <span id="taskCount">0 of 0 tasks done</span>
+            <button class="delete-btn" onclick="deleteSelected()">Remove checked</button>
+        </div>
+    </div>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
